@@ -91,6 +91,7 @@ document.querySelector('#btnThemNV').onclick = (e) => {
         })
         promise.then(function (result) {
             console.log('result', result.data);
+            alert('Thêm nhân viên thành công')
             getNhanVienApi();
         })
     
@@ -100,7 +101,7 @@ document.querySelector('#btnThemNV').onclick = (e) => {
         })
     }
 
-
+    
 }
 
 
@@ -115,6 +116,7 @@ function xoaNhanVien(maNhanVienClick) {
 
     promise.then(function (result) {
         console.log('result', result.data);
+        alert('Xóa nhân viên thành công')
         getNhanVienApi();
     })
 
@@ -189,6 +191,7 @@ function updateNV(maNhanVienUpdate){
         });
         promise.then(function(result){
             console.log('result',result.data);
+            alert('Cập nhật thông tin nhân viên thành công')
             getNhanVienApi();
         })
         promise.catch(function(error){
